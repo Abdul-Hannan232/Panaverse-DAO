@@ -16,6 +16,7 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+  Avatar,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -62,7 +63,7 @@ export default function Navbar() {
           >
             Logo
           </Text>
-
+          {/* <Avatar src={"/images/panaverse.png"} mb={2} /> */}
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
