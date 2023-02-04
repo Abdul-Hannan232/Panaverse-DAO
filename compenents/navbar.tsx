@@ -56,14 +56,14 @@ export default function Navbar() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
+          {/* <Text
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
             Logo
-          </Text>
-          {/* <Avatar src={"/images/panaverse.png"} mb={2} /> */}
+          </Text> */}
+          <Avatar as={"a"} href={"/"} src={"/images/panaverse.png"} mb={2} />
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
@@ -277,32 +277,45 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Home",
-    href: "/",
+    label: "Core",
+    children: [
+      {
+        label: "CS-101",
+        // subLabel: "Find your dream job",
+        href: "/courses/core-cs-101",
+      },
+      {
+        label: "W2-201",
+        // subLabel: "An exclusive list for contract work",
+        href: "/courses/core-w2-201",
+      },
+    ],
+    href: "/courses",
   },
   {
     label: "Specializations",
     children: [
       {
         label: "AI",
-        subLabel: "Find your dream job",
-        href: "/courses/ai",
+        // subLabel: "Find your dream job",
+        href: "/courses/specializations-ai",
       },
       {
         label: "CNC",
-        subLabel: "An exclusive list for contract work",
-        href: "/courses/ai",
+        // subLabel: "An exclusive list for contract work",
+        href: "/courses/specializations-cnc",
       },
       {
         label: "BCC",
-        subLabel: "Find your dream job",
-        href: "/courses/ai",
+        // subLabel: "Find your dream job",
+        href: "/courses/specializations-bcc",
       },
       {
         label: "IOT",
-        subLabel: "An exclusive list for contract work",
-        href: "/courses/ai",
+        // subLabel: "An exclusive list for contract work",
+        href: "/courses/specializations-iot",
       },
     ],
+    href: "/courses",
   },
 ];

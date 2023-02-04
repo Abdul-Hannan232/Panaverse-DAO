@@ -13,7 +13,7 @@ import {
   createIcon,
 } from "@chakra-ui/react";
 
-export default function HeroSection() {
+export default function Courses() {
   return (
     <>
       <Head>
@@ -35,15 +35,17 @@ export default function HeroSection() {
             fontSize={{ base: "2xl", sm: "3xl", md: "5xl" }}
             lineHeight={"110%"}
           >
+            The Program in a Nutshell: &nbsp;
+            {/* <br /> */}
             <Text as={"span"} color={"red.500"}>
-              A Nationwide Program
+              Earn While You Learn
             </Text>
-            <br />
-            Certified Web 3.0 and Metaverse Development
           </Heading>
           <Text color={"gray.500"}>
-            Getting Ready for the Next Generation and Future of the Internet -
-            Join a 13 Trillion Dollar Industry with 5 Billion Users
+            In this brand-new type of curriculum, students will learn how to
+            make money and boost exports in the classroom and will begin doing
+            so within six months of the program's beginning. It resembles a
+            cross between a corporate venture and an educational project.
           </Text>
           <Stack
             direction={"column"}
@@ -66,26 +68,6 @@ export default function HeroSection() {
             <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
               Learn more
             </Button>
-            <Box>
-              <Icon
-                as={Arrow}
-                color={useColorModeValue("gray.800", "gray.300")}
-                w={71}
-                position={"absolute"}
-                right={-71}
-                top={"10px"}
-              />
-              <Text
-                fontSize={"lg"}
-                fontFamily={"Caveat"}
-                position={"absolute"}
-                right={"-125px"}
-                top={"-15px"}
-                transform={"rotate(10deg)"}
-              >
-                Starting at $15/mo
-              </Text>
-            </Box>
           </Stack>
         </Stack>
       </Container>

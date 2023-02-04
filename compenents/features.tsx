@@ -60,9 +60,7 @@ export default function Features() {
           >
             Our Vision
           </Text>
-          <Heading>
-            A movement to spread cutting-edge technolgies nationwide
-          </Heading>
+          <Heading>Skill Development & Training</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
             The Future of the Web is Web 3.0, Metaverse, and Edge Computing.
             Panaverse DAO is community of Web 3 and Metaverse developers,
@@ -81,19 +79,19 @@ export default function Features() {
                 <Icon as={IoAnalyticsSharp} color={"yellow.500"} w={5} h={5} />
               }
               iconBg={useColorModeValue("yellow.100", "yellow.900")}
-              text={"Business Planning"}
+              text={"Interactive Quizzes & Materials"}
             />
             <Feature
               icon={<Icon as={IoLogoBitcoin} color={"green.500"} w={5} h={5} />}
               iconBg={useColorModeValue("green.100", "green.900")}
-              text={"Financial Planning"}
+              text={"Free Premium Resources"}
             />
             <Feature
               icon={
                 <Icon as={IoSearchSharp} color={"purple.500"} w={5} h={5} />
               }
               iconBg={useColorModeValue("purple.100", "purple.900")}
-              text={"Market Analysis"}
+              text={"Assignments & Quizzes"}
             />
           </Stack>
         </Stack>
