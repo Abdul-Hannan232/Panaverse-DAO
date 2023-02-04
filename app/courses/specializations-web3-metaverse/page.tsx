@@ -18,7 +18,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 
-export default function CoreSubjects() {
+export default function Specializations() {
   return (
     <>
       <Head>
@@ -41,105 +41,80 @@ export default function CoreSubjects() {
             lineHeight={"110%"}
             color={"red.500"}
           >
-            CS-101:&nbsp;
+            Specializations:&nbsp;
           </Heading>
-          <Text color={"gray.500"}>
-            We will start the program by learning the fundamentals of
-            Object-Oriented programming using JavaScript and TypeScript. We will
-            also understand the latest Web trends i.e. Web 3.0 and Metaverse
-            concepts and try to understand their working from the perspective of
-            the users.
-          </Text>
           <Heading fontSize={"xl"} color={"red.500"}>
             Course Outline
           </Heading>
 
+          <Text color={"gray.500"}>
+            The objective of this course is to teach participants to develop
+            customer-facing planet-scale Websites, Full-Stack Apps and
+            templates, Dashboards, and Muti-Cloud Serverless APIs. By the end of
+            the quarter, the participants will be able to develop and deploy web
+            platforms like Facebook, Shopify, etc. The technologies covered in
+            this course will include Next.js 13, Figma, Tailwind CSS, Chakra UI,
+            tRPC, QraphQL, Prisma, Cockroachdb Serverless (PostgreSQL
+            Compatible), AWS Serverless Technologies, and Cloud Development Kit
+            for Terraform (CDKTF).
+          </Text>
           <OrderedList textAlign={"left"} color={"blue.500"}>
             <ListItem
               as="a"
-              href="https://github.com/panaverse/panaverse.github.io#nextjs-13-web-development"
+              href="https://www.youtube.com/playlist?list=PLKvqnz8z1zWQ3BALy86tIXICkG874wAc6"
               target={"_blank"}
             >
-              Next.js 13 Web Development
+              HTML and CSS (Homework)
             </ListItem>
             <br />
             <ListItem
               as="a"
-              href="https://github.com/panaverse/panaverse.github.io#nextjs-13-using-chakra-ui-remote-zoom-class"
+              href="https://www.youtube.com/playlist?list=PLKvqnz8z1zWQ3BALy86tIXICkG874wAc6"
               target={"_blank"}
             >
-              Next.js 13 using Chakra UI (Remote Zoom Class)
+              Web 3.0 and Metaverse Theory
             </ListItem>
             <br />
             <ListItem
               as="a"
-              href="https://github.com/panaverse/panaverse.github.io#uiux-design-with-figma-tailwindcss-and-chakra-ui-remote--zoom-class"
+              href="https://www.youtube.com/playlist?list=PLKvqnz8z1zWQ3BALy86tIXICkG874wAc6"
               target={"_blank"}
             >
-              UI/UX Design with Figma, TailwindCSS, and Chakra UI (Remote Zoom
-              Class)
+              Fundamentals of JavaScript (ECMAScript 2022 Language
+              Specification)
             </ListItem>
             <br />
             <ListItem
               as="a"
-              href="https://github.com/panaverse/panaverse.github.io#api-routes-with-nextjs"
+              href="https://www.youtube.com/playlist?list=PLKvqnz8z1zWQ3BALy86tIXICkG874wAc6"
               target={"_blank"}
             >
-              API Routes with Next.js
+              Object-Oriented Programming with TypeScript
             </ListItem>
             <br />
             <ListItem
               as="a"
-              href="https://github.com/panaverse/panaverse.github.io#sql-and-prisma"
+              href="https://www.youtube.com/playlist?list=PLKvqnz8z1zWQ3BALy86tIXICkG874wAc6"
               target={"_blank"}
             >
-              SQL and Prisma
+              TypeScript for React
             </ListItem>
             <br />
             <ListItem
               as="a"
-              href="https://github.com/panaverse/panaverse.github.io#nextjs-13-using-tailwindcss-remote-zoom-class"
+              href="https://www.youtube.com/playlist?list=PLKvqnz8z1zWQ3BALy86tIXICkG874wAc6"
               target={"_blank"}
             >
-              Next.js 13 using TailwindCSS (Remote Zoom Class)
+              TypeScript Quizzes
             </ListItem>
             <br />
 
             <ListItem
               as="a"
-              href="https://github.com/panaverse/panaverse.github.io#aws-application-composer-remote-zoom-class"
+              href="https://www.youtube.com/playlist?list=PLKvqnz8z1zWQ3BALy86tIXICkG874wAc6"
               target={"_blank"}
             >
-              AWS Application Composer (Remote Zoom Class)
-            </ListItem>
-            <ListItem
-              as="a"
-              href="https://github.com/panaverse/panaverse.github.io#multi-cloud-graphql-serverless-api-development-with-cloud-development-kit-for-terraform-cdktf-remote-zoom-class"
-              target={"_blank"}
-            >
-              Multi-Cloud GraphQL Serverless API Development with Cloud
-              Development Kit for Terraform (CDKTF) (Remote Zoom Class)
-            </ListItem>
-            <ListItem
-              as="a"
-              href="https://github.com/panaverse/panaverse.github.io#earn-while-you-learn-projects"
-              target={"_blank"}
-            >
-              Earn While You Learn Projects
-            </ListItem>
-            <ListItem
-              as="a"
-              href="https://github.com/panaverse/panaverse.github.io#build-full-stack-nextjs-13-jamstack-templates"
-              target={"_blank"}
-            >
-              Build Full-Stack Next.js 13 Jamstack Templates
-            </ListItem>
-            <ListItem
-              as="a"
-              href="https://github.com/panaverse/panaverse.github.io#build-qraphql-apis"
-              target={"_blank"}
-            >
-              Build QraphQL APIs
+              Fundamentals of Version Control with Git (Recorded Videos)
             </ListItem>
             <br />
           </OrderedList>

@@ -1,5 +1,4 @@
 "use client";
-
 import Head from "next/head";
 import {
   Box,
@@ -11,8 +10,17 @@ import {
   Icon,
   useColorModeValue,
   createIcon,
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  Flex,
 } from "@chakra-ui/react";
 
+import CoreSubjects from "./core-cs-101/page";
+import FullStack from "./core-w2-201/page";
+import Specializations from "./specializations-web3-metaverse/page";
 export default function Courses() {
   return (
     <>
@@ -53,22 +61,83 @@ export default function Courses() {
             align={"center"}
             alignSelf={"center"}
             position={"relative"}
-          >
-            <Button
-              colorScheme={"green"}
-              bg={"red.500"}
-              rounded={"full"}
-              px={6}
-              _hover={{
-                bg: "red.400",
-              }}
-            >
-              Get Started
-            </Button>
-            <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
-              Learn more
-            </Button>
-          </Stack>
+          ></Stack>
+          {/*  */}
+          <hr />
+          <Box justifyContent={"center"}>
+            <Tabs variant="soft-rounded" colorScheme="red">
+              <TabList>
+                <Tab>Core Subjects</Tab>
+                <Tab>Specializations</Tab>
+              </TabList>
+              <br />
+              <TabPanels>
+                {/* <CoreSubjects /> */}
+                <TabPanel>
+                  <Tabs variant="soft-rounded" colorScheme="red">
+                    <TabList>
+                      <Flex direction={"column"}>
+                        <Text color={"gray.500"}>
+                          Every participant of the program will start by
+                          completing the following two core courses:
+                        </Text>
+                        <br />
+                        <Flex direction={"row"} justifyContent="center">
+                          <Tab>OOP</Tab>
+                          <Tab>Full Stack Web2.0</Tab>
+                        </Flex>
+                      </Flex>
+                    </TabList>
+                    <TabPanels>
+                      <TabPanel>
+                        <CoreSubjects />
+                      </TabPanel>
+                      <TabPanel>
+                        <FullStack />
+                      </TabPanel>
+                    </TabPanels>
+                  </Tabs>
+                </TabPanel>
+
+                {/* <Specializations /> */}
+                <TabPanel>
+                  <Tabs variant="soft-rounded" colorScheme="red">
+                    <TabList>
+                      <Flex direction={"column"}>
+                        <Text color={"gray.500"}>
+                          After completing the first two quarters the
+                          participants will select one or more specializations
+                          consisting of two courses each:
+                        </Text>
+                        <br />
+                        <Flex direction={"row"} justifyContent="center">
+                          <Tab>Web 3.0</Tab>
+                          <Tab>Artificial Intelligence</Tab>
+                          <Tab>Cloud-Native Computing</Tab>
+                          <Tab>Ambient Computing and IoT</Tab>
+                        </Flex>
+                      </Flex>
+                    </TabList>
+                    <TabPanels>
+                      <TabPanel>
+                        <Specializations />
+                      </TabPanel>
+                      <TabPanel>
+                        <Specializations />
+                      </TabPanel>
+
+                      <TabPanel>
+                        <Specializations />
+                      </TabPanel>
+                      <TabPanel>
+                        <Specializations />
+                      </TabPanel>
+                    </TabPanels>
+                  </Tabs>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
+          </Box>
         </Stack>
       </Container>
     </>
@@ -87,3 +156,4 @@ const Arrow = createIcon({
     />
   ),
 });
+//

@@ -12,7 +12,7 @@ import {
   useColorModeValue,
   createIcon,
 } from "@chakra-ui/react";
-
+import Link from "next/link";
 export default function HeroSection() {
   return (
     <>
@@ -53,39 +53,24 @@ export default function HeroSection() {
             position={"relative"}
           >
             <Button
-              colorScheme={"green"}
+              p={3}
+              // margin={"0px 0px 0px 4px"}
+              lineHeight="1.2"
+              borderRadius={"var(--chakra-radii-md)"}
+              height="var(--chakra-sizes-10)"
+              minWidth="var(--chakra-sizes-10)"
+              fontSize={"sm"}
+              fontWeight={600}
+              color={"white"}
               bg={"red.500"}
-              rounded={"full"}
-              px={6}
               _hover={{
+                textDecoration: "none",
+                color: "white",
                 bg: "red.400",
               }}
             >
-              Get Started
+              <Link href={"/courses"}>View Courses</Link>
             </Button>
-            <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
-              Learn more
-            </Button>
-            <Box>
-              <Icon
-                as={Arrow}
-                color={useColorModeValue("gray.800", "gray.300")}
-                w={71}
-                position={"absolute"}
-                right={-71}
-                top={"10px"}
-              />
-              <Text
-                fontSize={"lg"}
-                fontFamily={"Caveat"}
-                position={"absolute"}
-                right={"-125px"}
-                top={"-15px"}
-                transform={"rotate(10deg)"}
-              >
-                Starting at $15/mo
-              </Text>
-            </Box>
           </Stack>
         </Stack>
       </Container>

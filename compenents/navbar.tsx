@@ -9,7 +9,6 @@ import {
   Stack,
   Collapse,
   Icon,
-  Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -17,7 +16,9 @@ import {
   useBreakpointValue,
   useDisclosure,
   Avatar,
+  Image,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import {
   HamburgerIcon,
   CloseIcon,
@@ -56,14 +57,23 @@ export default function Navbar() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          {/* <Text
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
-          >
-            Logo
-          </Text> */}
-          <Avatar as={"a"} href={"/"} src={"/images/panaverse.png"} mb={2} />
+          <Link href="/">
+            <Text
+              position={"absolute"}
+              top={["5px", "0px", "-5px"]}
+              textAlign={useBreakpointValue({ base: "center", md: "left" })}
+              fontFamily={"heading"}
+              color={useColorModeValue("gray.800", "white")}
+            >
+              <Image
+                borderRadius="full"
+                boxSize={["50px", "50px", "70px"]}
+                src="/images/panaverse.png"
+                alt="Panaverse DAO Logo"
+              />
+            </Text>
+          </Link>
+
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
@@ -115,13 +125,14 @@ const DesktopNav = () => {
 
   return (
     <Stack direction={"row"} spacing={4}>
+      <Box mr={["40px"]}></Box>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <Link
+              <Button
                 p={3}
-                margin={"0px 0px 0px 4px"}
+                mr={"4px"}
                 lineHeight="1.2"
                 borderRadius={"var(--chakra-radii-md)"}
                 height="var(--chakra-sizes-10)"
@@ -130,15 +141,14 @@ const DesktopNav = () => {
                 fontWeight={600}
                 color={"white"}
                 bg={"red.500"}
-                href={navItem.href ?? "/"}
                 _hover={{
                   textDecoration: "none",
                   color: "white",
                   bg: "red.400",
                 }}
               >
-                {navItem.label}
-              </Link>
+                <Link href={navItem.href ?? "/"}>{navItem.label}</Link>
+              </Button>
             </PopoverTrigger>
 
             {navItem.children && (
@@ -166,38 +176,39 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
-    <Link
-      href={href}
+    <Button
       role={"group"}
       display={"block"}
       p={2}
       rounded={"md"}
       _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
     >
-      <Stack direction={"row"} align={"center"}>
-        <Box>
-          <Text
+      <Link href={`${href}`}>
+        <Stack direction={"row"} align={"center"}>
+          <Box>
+            <Text
+              transition={"all .3s ease"}
+              _groupHover={{ color: "pink.400" }}
+              fontWeight={500}
+            >
+              {label}
+            </Text>
+            <Text fontSize={"sm"}>{subLabel}</Text>
+          </Box>
+          <Flex
             transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
-            fontWeight={500}
+            transform={"translateX(-10px)"}
+            opacity={0}
+            _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
+            justify={"flex-end"}
+            align={"center"}
+            flex={1}
           >
-            {label}
-          </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
-        </Box>
-        <Flex
-          transition={"all .3s ease"}
-          transform={"translateX(-10px)"}
-          opacity={0}
-          _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
-          justify={"flex-end"}
-          align={"center"}
-          flex={1}
-        >
-          <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
-      </Stack>
-    </Link>
+            <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
+          </Flex>
+        </Stack>
+      </Link>
+    </Button>
   );
 };
 
@@ -258,7 +269,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <Link key={child.label} href={`${child.href}`}>
                 {child.label}
               </Link>
             ))}
@@ -298,22 +309,22 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: "AI",
         // subLabel: "Find your dream job",
-        href: "/courses/specializations-ai",
+        href: "/courses/specializations-web3-metaverse",
       },
       {
         label: "CNC",
         // subLabel: "An exclusive list for contract work",
-        href: "/courses/specializations-cnc",
+        href: "/courses/specializations-web3-metaverse",
       },
       {
         label: "BCC",
         // subLabel: "Find your dream job",
-        href: "/courses/specializations-bcc",
+        href: "/courses/specializations-web3-metaverse",
       },
       {
         label: "IOT",
         // subLabel: "An exclusive list for contract work",
-        href: "/courses/specializations-iot",
+        href: "/courses/specializations-web3-metaverse",
       },
     ],
     href: "/courses",
