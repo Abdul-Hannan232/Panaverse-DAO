@@ -41,6 +41,10 @@ const TestimonialContent = ({ children }: { children: ReactNode }) => {
         left: "50%",
         transform: "translateX(-50%)",
       }}
+      _hover={{
+        bottom: "16px",
+        boxShadow: "5px 5px 48px red}",
+      }}
     >
       {children}
     </Stack>
