@@ -18,7 +18,7 @@ const TestimonialContent = ({ children }: { children: ReactNode }) => {
   return (
     <Stack
       bg={useColorModeValue("white", "white.900")}
-      boxShadow={"lg"}
+      boxShadow={"2xl"}
       p={12}
       rounded={"xl"}
       align={"center"}
@@ -84,7 +84,7 @@ const TestimonialText = ({ children }: { children: ReactNode }) => {
 export default function Testimonials() {
   return (
     <Box
-      bg={useColorModeValue("gray.100", "gray.200")}
+      bg={useColorModeValue("white", "gray.200")}
       color="gray.700"
       fontWeight={"bold"}
       mb={10}

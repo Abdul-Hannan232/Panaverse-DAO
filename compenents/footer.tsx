@@ -9,12 +9,24 @@ import {
   useColorModeValue,
   VisuallyHidden,
   Avatar,
+  Image,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { ReactNode } from "react";
 
 const Logo = () => {
-  return <Avatar src={"/images/panaverse.png"} mb={2} />;
+  // <Image src={"/images/panaverse.png"} alt={"Panaverse DAO Logo"} />;
+  return (
+    <Link href="/">
+      <Image
+        borderRadius="full"
+        boxSize={["50px", "50px", "100px"]}
+        src="/images/panaverse.png"
+        alt="Panaverse DAO Logo"
+      />
+    </Link>
+  );
 };
 
 const SocialButton = ({
@@ -67,13 +79,22 @@ export default function Footer() {
         <Logo />
         <Text>© 2023 Panaverse DAO. All rights reserved</Text>
         <Stack direction={"row"} spacing={6}>
-          <SocialButton label={"Twitter"} href={"#"}>
+          <SocialButton
+            label={"Twitter"}
+            href={"https://twitter.com/Panaverse_edu"}
+          >
             <FaTwitter />
           </SocialButton>
-          <SocialButton label={"YouTube"} href={"#"}>
+          <SocialButton
+            label={"YouTube"}
+            href={"https://www.youtube.com/@panaverse"}
+          >
             <FaYoutube />
           </SocialButton>
-          <SocialButton label={"Instagram"} href={"#"}>
+          <SocialButton
+            label={"Instagram"}
+            href={"https://www.instagram.com/codenestcn/"}
+          >
             <FaInstagram />
           </SocialButton>
         </Stack>
