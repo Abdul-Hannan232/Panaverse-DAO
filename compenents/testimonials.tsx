@@ -88,12 +88,12 @@ export default function Testimonials() {
       color="gray.700"
       fontWeight={"bold"}
       mb={10}
-      p={12}
+      p={[2, 6, 12]}
     >
       <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
         <Stack spacing={0} align={"center"}>
           <Heading color="red.500">Program of Studies</Heading>
-          <Text p="32px 88px 24px 88px">
+          <Text p={["40px 0px", "32px 50px 24px 50px", "32px 88px 24px 88px"]}>
             This curriculum is intended for beginners who want to learn software
             development from the ground up. The first two quarters are shared by
             all specialities and are dedicated to studying Object-Oriented

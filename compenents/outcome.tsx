@@ -57,7 +57,7 @@ const Outcome = () => {
   return (
     <Box
       boxSizing="border-box"
-      padding={120}
+      padding={[10, 80, 120]}
       mb={10}
       bg="white"
       w="100%"

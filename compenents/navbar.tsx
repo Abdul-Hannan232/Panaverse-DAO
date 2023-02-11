@@ -60,7 +60,8 @@ export default function Navbar() {
           <Link href="/">
             <Text
               position={"absolute"}
-              top={["5px", "0px", "-5px"]}
+              top={["5px", "5px", "-5px"]}
+              left={["45vw", "45vw", "0px"]}
               textAlign={useBreakpointValue({ base: "center", md: "left" })}
               fontFamily={"heading"}
               color={useColorModeValue("gray.800", "white")}
