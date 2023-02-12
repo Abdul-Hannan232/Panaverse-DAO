@@ -308,7 +308,7 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Specializations",
     children: [
       {
-        label: "AI",
+        label: "Web3",
         // subLabel: "Find your dream job",
         href: "/courses/specializations-web3-metaverse",
       },
@@ -323,9 +323,9 @@ const NAV_ITEMS: Array<NavItem> = [
         href: "/courses/specializations-web3-metaverse",
       },
       {
-        label: "IOT",
+        label: "AI",
         // subLabel: "An exclusive list for contract work",
-        href: "/courses/specializations-web3-metaverse",
+        href: "/courses/specializations-ai",
       },
     ],
     href: "/courses",

@@ -41,34 +41,25 @@ export default function CoreSubjects() {
             lineHeight={"110%"}
             color={"red.500"}
           >
-            Web 3.0 (Blockchain) and Metaverse Specialization:&nbsp;
+            Artificial Intelligence (AI) and Deep Learning Specialization:&nbsp;
           </Heading>
           <Text color={"gray.500"}>
-            This Web 3.0 and Metaverse specialization focuses on developing
-            full-stack Web 3.0 and Metaverse experiences for the next generation
-            of the internet by specializing in building worlds that merge the
-            best of cutting-edge decentralized distributed blockchains with 3D
-            metaverse client experiences.
+            The AI and Deep Learning specialization focuses on building and
+            deploying intelligent APIs using OpenAI models and building custom
+            Deep Learning Tensorflow models.
           </Text>
           <Heading fontSize={"xl"} color={"red.500"}>
             Course Outline
           </Heading>
 
           <OrderedList textAlign={"left"} color={"blue.500"}>
-            <ListItem
-              as="a"
-              href="https://github.com/panaverse/panaverse.github.io#nextjs-13-web-development"
-              target={"_blank"}
-            >
-              Next.js 13 Web Development
+            <ListItem as="a" href="https://www.panaverse.co/" target={"_blank"}>
+              Quarter III AI-351: Developing Planet-Scale Intelligent APIs and
+              Python Programming
             </ListItem>
             <br />
-            <ListItem
-              as="a"
-              href="https://github.com/panaverse/panaverse.github.io#nextjs-13-using-chakra-ui-remote-zoom-class"
-              target={"_blank"}
-            >
-              Next.js 13 using Chakra UI (Remote Zoom Class)
+            <ListItem as="a" href="https://www.panaverse.co/" target={"_blank"}>
+              Quarter IV AI-361: Deep Learning and MLOps
             </ListItem>
             <br />
             <ListItem

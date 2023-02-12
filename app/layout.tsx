@@ -2,6 +2,7 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "@/compenents/navbar";
 import Footer from "@/compenents/footer";
+import { motion } from "framer-motion";
 
 export default function RootLayout({
   children,
@@ -17,9 +18,11 @@ export default function RootLayout({
       <head />
       <body>
         <ChakraProvider>
+          {/* <div as={motion.div}> */}
           <Navbar />
           {children}
           <Footer />
+          {/* </div> */}
         </ChakraProvider>
       </body>
     </html>

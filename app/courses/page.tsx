@@ -20,7 +20,7 @@ import {
 
 import CoreSubjects from "./core-cs-101/page";
 import FullStack from "./core-w2-201/page";
-import Specializations from "./specializations-web3-metaverse/page";
+import Specializations from "./specializations-ai/page";
 export default function Courses() {
   return (
     <>
